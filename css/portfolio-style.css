@@ -264,6 +264,16 @@ main {
   overflow-y: auto;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #8610e0;
+}
+
 .welcomeDiv {
   position: relative;
   width: 100%;
@@ -283,7 +293,6 @@ main {
 }
 
 .freelancerPictureContainer {
-  /* width: fit-content; */
   padding: 0 1rem;
   background-color: #c4c4c486;
   border-radius: 1rem;
@@ -293,7 +302,7 @@ main {
 .myself {
   position: relative;
   top: 2rem;
-  width: 12rem;
+  width: 13rem;
   border-radius: 1rem;
 }
 
@@ -305,9 +314,27 @@ main {
   font-size: 1.3rem;
 }
 
+hr {
+  height: 3px;
+  width: 100%;
+  background-color: whitesmoke;
+}
+
 .showcase {
   width: 100%;
   height: 100%;
+}
+
+.heading,
+.showcaseText {
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.showcaseText {
+  font-size: 1.2rem;
 }
 
 /* card styles */
@@ -317,42 +344,29 @@ main {
   margin-top: 3.5rem;
   height: auto;
   width: 100%;
-  display: flex;
   flex-wrap: wrap;
-  /* grid-template-columns: repeat(3, minmax(5rem, 1fr));
-  grid-gap: 0.5rem; */
   transition: 1s ease;
 }
-
-/* @media (max-width: 1080px) {
-  .showcaseTileContainer {
-    grid-template-columns: repeat(2, minmax(5rem, 1fr));
-  }
-}
-
-@media (max-width: 768px) {
-  .showcaseTileContainer {
-    grid-template-columns: 1fr;
-  }
-} */
 
 /* card styles */
 
 .Products {
   position: relative;
-  margin: 3.5rem auto;
+  margin: 2rem auto;
   height: 25rem;
   width: 20rem;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background: #f5f3f3;
-  align-items: center;
   border: none;
   border-radius: 1.5rem;
   transition: ease 0.5s;
-  box-shadow: 3px 3px 10px #848385;
+  box-shadow: 0 3px 10px #848385;
 }
+
+@media (min-width: 1024px) {
+  .Products {
+    margin: 2rem;
+  }
+
 
 .hover-me {
   padding: 0.5rem;
