@@ -205,19 +205,20 @@ main {
 }
 
 .mainBody {
-  height: calc(100vh - 4rem);
+  height: calc(100vh - 5rem);
 }
 
 .socialMediaContainer {
   width: 100%;
-  height: 4rem;
+  height: 5rem;
   position: fixed;
   bottom: 0;
   left: 0;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgba(174, 0, 255, 0.199);
+  background-color: #ae00ff57;
   border-radius: 1rem 1rem 0 0;
 }
 
@@ -225,19 +226,14 @@ main {
   line-height: 1.3rem;
   font-size: 1.2rem;
   font-weight: 700;
-  width: 10rem;
-  margin: 0 3rem 0 0;
+  width: 100%;
+  text-align: center;
+  padding: 0 0 0.5rem 0;
   color: white;
 }
 
 .socialConnect {
   padding: 0.5rem 0.5rem 0;
-  margin: 0 5px;
-  /* background-color: darkblue; */
-}
-
-.socialMediaContainer .socialConnect svg {
-  height: 2.5rem;
 }
 
 .socialMediaContainer .socialConnect svg:hover {
@@ -248,12 +244,55 @@ main {
   fill: white;
 }
 
-.socialMediaContainer .socialConnect.codepen svg:hover path,
 .socialMediaContainer .socialConnect.freecodecamp svg:hover path {
   stroke: whitesmoke;
 }
 
 .socialMediaContainer .socialConnect svg {
-  height: 2rem;
-  width: 2rem;
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.contentContainer {
+  margin: 0.5rem auto 0;
+  height: calc(100vh - 5rem - 5rem);
+  width: 95%;
+  border-radius: 1rem;
+  background-color: #ffffff1f;
+  flex-direction: column-reverse;
+  overflow-y: auto;
+}
+
+.welcomeTextContainer {
+  height: 10rem;
+  width: 100%;
+  max-width: 30rem;
+  padding: 5px;
+  text-align: center;
+  color: white;
+  letter-spacing: 2px;
+  /* background-color: aquamarine; */
+}
+
+.freelancerPictureContainer {
+  width: fit-content;
+  padding: 0 1rem;
+  background-color: #c4c4c486;
+  border-radius: 1rem;
+  margin-bottom: 5rem;
+}
+
+.myself {
+  position: relative;
+  top: 2rem;
+  width: 12rem;
+  border-radius: 1rem;
+}
+
+.welcomeTextContainer h2 {
+  font-size: 1.5rem;
+}
+
+.welcomeTextContainer p {
+  font-size: 1.3rem;
 }
