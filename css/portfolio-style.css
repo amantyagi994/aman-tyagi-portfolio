@@ -9,13 +9,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;600;800&family=Modak&display=swap");
 
 :root {
-  --righteous: "Righteous", cursive;
-  --orbitron: "Orbitron", sans-serif;
   --purple: #b700ffcc;
-  --blue: #0000ff88;
   --purpleDark: hsla(281, 79%, 24%, 0.773);
-  --blue-transparent: #0000ffaf;
-  --smh: hsl(0, 0%, 0%);
+  --black: hsl(0, 0%, 0%);
 }
 
 * {
@@ -28,12 +24,12 @@
 html,
 body {
   scroll-behavior: smooth;
-  /* font-family: "Chakra Petch", sans-serif; */
   font-family: "Baloo Da 2", cursive;
 }
 
 a {
   text-decoration: none;
+  cursor: pointer;
 }
 
 ul {
@@ -67,7 +63,7 @@ main {
 }
 
 .navTop {
-  padding: 1rem 3rem;
+  padding: 1.5rem;
   justify-content: space-between;
   background-color: #f5f5f538;
   height: 4rem;
@@ -101,7 +97,6 @@ main {
   width: 50px;
   height: 50px;
   opacity: 0;
-  /* display: none; */
 }
 
 .ham-wrapper .hamburger-menu {
@@ -115,7 +110,6 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* visibility: hidden; */
 }
 
 .ham-wrapper .hamburger-menu > div {
@@ -208,4 +202,58 @@ main {
   color: inherit;
   text-decoration: none;
   transition: color 0.5s ease;
+}
+
+.mainBody {
+  height: calc(100vh - 4rem);
+}
+
+.socialMediaContainer {
+  width: 100%;
+  height: 4rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(174, 0, 255, 0.199);
+  border-radius: 1rem 1rem 0 0;
+}
+
+.connectMeText {
+  line-height: 1.3rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  width: 10rem;
+  margin: 0 3rem 0 0;
+  color: white;
+}
+
+.socialConnect {
+  padding: 0.5rem 0.5rem 0;
+  margin: 0 5px;
+  /* background-color: darkblue; */
+}
+
+.socialMediaContainer .socialConnect svg {
+  height: 2.5rem;
+}
+
+.socialMediaContainer .socialConnect svg:hover {
+  fill: white;
+}
+
+.socialMediaContainer .socialConnect svg:hover path {
+  fill: white;
+}
+
+.socialMediaContainer .socialConnect.codepen svg:hover path,
+.socialMediaContainer .socialConnect.freecodecamp svg:hover path {
+  stroke: whitesmoke;
+}
+
+.socialMediaContainer .socialConnect svg {
+  height: 2rem;
+  width: 2rem;
 }
