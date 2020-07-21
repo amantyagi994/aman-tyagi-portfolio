@@ -6,7 +6,7 @@ window.addEventListener("scroll", function () {
 });
 
 let af;
-const numLasers = 70;
+const numLasers = 30;
 const tail = 200;
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
