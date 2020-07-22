@@ -407,13 +407,15 @@ main {
 .Products {
   position: relative;
   margin: 2rem auto;
-  height: 25rem;
-  width: 20rem;
+  height: 21rem;
+  width: 100%;
+  max-width: 30rem;
   display: flex;
   border: none;
   border-radius: 1.5rem;
   transition: ease 0.5s;
   box-shadow: 0 3px 10px #848385;
+  cursor: pointer;
 }
 
 @media (min-width: 1024px) {
@@ -427,8 +429,6 @@ main {
   color: #000000;
   position: absolute;
   transform: translateY(-8rem);
-  /* opacity: 0;
-  visibility: hidden; */
   font-family: var(--courgette);
   transition: ease 0.3s;
   z-index: 1;
@@ -439,12 +439,9 @@ main {
   padding: 0.5rem;
   color: black;
   font-family: var(--lobster);
-
   font-weight: bold;
   position: absolute;
   transform: translateY(-1rem);
-  /* opacity: 0;
-  visibility: hidden; */
   transition: ease 0.5s;
   z-index: 1;
   border: 1px solid #770f77;
@@ -467,15 +464,15 @@ main {
   color: #000000;
 }
 
-/* .p-image {
-  height: 100%;
+.p-image {
+  /* height: 100%; */
   width: 100%;
   opacity: 0.3;
   visibility: visible;
   transition: ease 0.5s;
   border: none;
   border-radius: inherit;
-} */
+}
 
 .Products:hover .p-image {
   opacity: 1;
@@ -487,7 +484,7 @@ main {
   opacity: 1;
   visibility: visible;
   transform: translateY(-8rem);
-  background: #ffffff;
+  background: #ffffffb4;
 }
 
 .Products:hover .read-more {
@@ -517,8 +514,6 @@ main .Products:nth-child(2) .product-title {
     color: #000000;
     position: absolute;
     transform: translateY(-8rem);
-    /* opacity: 0;
-  visibility: hidden; */
     font-family: var(--courgette);
     transition: ease 0.3s;
     z-index: 1;
@@ -529,12 +524,9 @@ main .Products:nth-child(2) .product-title {
     padding: 0.5rem;
     color: black;
     font-family: var(--lobster);
-
     font-weight: bold;
     position: absolute;
     transform: translateY(-1rem);
-    /* opacity: 0;
-  visibility: hidden; */
     transition: ease 0.5s;
     z-index: 1;
     border: 1px solid #770f77;
@@ -554,6 +546,25 @@ main .Products:nth-child(2) .product-title {
   }
 
   .hover-me {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .Products:hover .product-title {
+    color: #000000;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(-8rem);
+    background: #ffffffb4;
+  }
+
+  .Products:hover .read-more {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(8rem);
+  }
+
+  .Products:hover .hover-me {
     opacity: 0;
     visibility: hidden;
   }
