@@ -9,11 +9,39 @@
   </head>
   <body>
     <div class="canva">
-      <canvas></canvas>
+      <!-- <canvas></canvas> -->
+      <svg width="100%" height="100%">
+        <defs>
+          <pattern
+            id="polka-dots"
+            x="0"
+            y="0"
+            width="100"
+            height="100"
+            patternUnits="userSpaceOnUse"
+          >
+            <circle fill="#be9ddf" cx="25" cy="25" r="3"></circle>
+          </pattern>
+        </defs>
+
+        <rect
+          x="0"
+          y="0"
+          width="100%"
+          height="100%"
+          fill="url(#polka-dots)"
+        ></rect>
+      </svg>
     </div>
+
     <main>
       <nav class="navTop dp-flex aln-center">
-        <div class="LogoContainer"><h2>AMAN TYAGI</h2></div>
+        <!-- <div class="LogoContainer"><h2>AMAN TYAGI</h2></div> -->
+        <svg width="auto" height="100%">
+          <text x="50%" y="6.5rem" text-anchor="middle">
+            Aman Tyagi
+          </text>
+        </svg>
         <div class="navItemsContainer">
           <div class="ham-wrapper">
             <input type="checkbox" class="toggle-menu" />
