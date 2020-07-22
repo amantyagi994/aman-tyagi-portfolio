@@ -1,9 +1,9 @@
-window.addEventListener("scroll", function () {
-  const parallax = document.querySelector(".parallax");
-  let scrollPosition = window.pageYOffset;
+// window.addEventListener("scroll", function () {
+//   const parallax = document.querySelector(".parallax");
+//   let scrollPosition = window.pageYOffset;
 
-  parallax.style.transform = "translateY(" + scrollPosition * 0.35 + "px)";
-});
+//   parallax.style.transform = "translateY(" + scrollPosition * 0.35 + "px)";
+// });
 
 let af;
 const numLasers = 30;

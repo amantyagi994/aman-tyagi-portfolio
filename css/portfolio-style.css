@@ -69,17 +69,14 @@ main {
   height: 100vh;
   width: 100vw;
   position: fixed;
-  /* top: -10px; */
   left: 0;
-  /* transform: rotate(180deg); */
   z-index: -10;
   overflow: hidden;
 }
 
 .navTop {
-  /* padding: 1.5rem; */
   justify-content: space-between;
-  background-color: #ffffff28;
+  /* background-color: #ffffff28; */
   height: 8rem;
   border-radius: 0 0 1rem 1rem;
 }
@@ -90,17 +87,9 @@ main {
     transform: translate(-25%, -50%);
   }
   .navTop {
-    height: 5rem;
+    height: 5.2rem;
   }
 }
-/* 
-.navTop .LogoContainer h2 {
-  font-family: "Modak", cursive;
-  letter-spacing: 5px;
-  background: transparent;
-  font-weight: normal;
-  font-size: 1.5rem;
-} */
 
 .ham-wrapper {
   width: 100%;
@@ -226,13 +215,32 @@ main {
   transition: color 0.5s ease;
 }
 
+@media (min-width: 1024px) {
+  .toggle-menu {
+    visibility: hidden;
+  }
+
+  .ham-wrapper .hamburger-menu {
+    visibility: hidden;
+  }
+
+  .ham-wrapper .menu {
+    right: 0;
+    height: 5rem;
+    width: 20rem;
+    visibility: visible;
+  }
+  
+  .ham-wrapper .menu .item-container {
+    transform: translateY(0%);
+  }
+}
+
 .mainBody {
   position: fixed;
-  top: 8rem;
-  height: calc(100vh - 8rem);
-  border-top: 1px solid #993cd2;
-  border-bottom: 1px solid #000;
+  height: calc(100vh - 8rem - 5rem);
   margin: 0 2rem;
+  box-shadow: 0 2px 4px #ffffff33 inset;
 }
 
 .socialMediaContainer {
@@ -282,24 +290,21 @@ main {
 }
 
 .contentContainer {
-  margin: 0.5rem auto 0;
-  padding: 1rem 0;
-  height: calc(100vh - 5rem - 5rem);
+  height: calc(100vh - 8rem - 5rem);
   border-radius: 1rem;
-  background-color: #ffffff1f;
   flex-direction: column;
   overflow-y: auto;
 }
 
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 0px;
   background-color: transparent;
 }
 
-::-webkit-scrollbar-thumb {
+/* ::-webkit-scrollbar-thumb {
   border-radius: 10px;
   background-color: #8610e0;
-}
+} */
 
 .welcomeDiv {
   position: relative;
@@ -311,12 +316,13 @@ main {
 
 .welcomeTextContainer {
   height: 10rem;
-  width: 100%;
+  /* width: 100%; */
   max-width: 30rem;
   padding: 5px;
   text-align: center;
   /* color: white; */
   letter-spacing: 2px;
+  /* background-color: darkgray; */
 }
 
 .freelancerPictureContainer {
@@ -331,6 +337,26 @@ main {
   top: 2rem;
   width: 13rem;
   border-radius: 1rem;
+  box-shadow: 0 3px 30px #00000033;
+}
+
+@media screen and (min-width: 1024px) {
+  .welcomeDiv {
+    flex-direction: row;
+    justify-content: space-evenly;
+    /* background-color: darkgoldenrod; */
+  }
+
+  .freelancerPictureContainer {
+    padding: 1rem 0;
+    margin: 3rem 0;
+  }
+
+  .myself {
+    top: 0;
+    right: 1.5rem;
+    box-shadow: -3px 0 30px #00000033;
+  }
 }
 
 .welcomeTextContainer h2 {
