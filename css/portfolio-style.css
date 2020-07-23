@@ -335,15 +335,14 @@ main {
 }
 
 @media screen and (min-width: 1024px) {
-  .contentContainer {
-    height: calc(100vh - 3rem);
-    /* height: 20rem; */
+  .mainBody {
+    height: calc(100vh - 7rem);
   }
 
   .welcomeDiv {
     flex-direction: row;
     justify-content: space-evenly;
-    padding-top: 1rem;
+    padding-top: 3rem;
   }
 
   .freelancerPictureContainer {
