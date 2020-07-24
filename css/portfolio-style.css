@@ -419,6 +419,7 @@ main {
   transition: ease 0.5s;
   box-shadow: 0 3px 10px #84838544;
   cursor: pointer;
+  background-color: #fff;
 }
 
 @media (min-width: 1024px) {
@@ -437,6 +438,7 @@ main {
   z-index: 1;
   border: 1px solid #770f77;
   border-radius: 6px;
+  background: #ffffff;
 }
 
 .product-title {
@@ -450,6 +452,7 @@ main {
   z-index: 1;
   border: 1px solid #770f77;
   border-radius: 6px;
+  background-color: #fff;
 }
 
 .read-more {
@@ -464,12 +467,13 @@ main {
   border: 1px solid #770f77;
   border-radius: 6px;
   font-weight: 600;
+  background: #ffffff;
 }
 
 .p-image {
   height: auto;
   width: 100%;
-  opacity: 0.3;
+  opacity: 0.4;
   visibility: visible;
   transition: ease 0.5s;
   border: none;
@@ -486,18 +490,16 @@ main {
   opacity: 1;
   visibility: visible;
   transform: translateY(-8rem);
-  background: #ffffffc0;
+  /* background: #ffffffc0; */
 }
 
 .Products:hover .read-more {
   opacity: 1;
   visibility: visible;
   transform: translateY(8rem);
-  background: #ffffffc0;
 }
 
 .read-more:hover {
-  background: #ffffff;
   color: #000000;
 }
 
