@@ -237,7 +237,7 @@ main {
 }
 
 .mainBody {
-  height: calc(100vh - 9rem);
+  height: calc(100vh - 8rem);
   margin: 0 1rem 1rem;
   border-radius: 1rem;
   flex-direction: column-reverse;
@@ -249,23 +249,11 @@ main {
   position: relative;
   bottom: 0;
   left: 0;
-  display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #ae00ffbe;
+  background-color: #ae00ff;
   border-radius: 0 0 1rem 1rem;
   z-index: 10;
-}
-
-.connectMeText {
-  line-height: 1.3rem;
-  font-size: 1rem;
-  font-weight: 700;
-  width: 100%;
-  text-align: center;
-  padding: 0 0 0.5rem 0;
-  color: #000;
+  padding: 0.5rem;
 }
 
 .socialConnect {
@@ -291,7 +279,9 @@ main {
 }
 
 .contentContainer {
-  height: inherit;
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 8rem);
   border-radius: 1rem 1rem 0 0;
   flex-direction: column;
   overflow-y: auto;
@@ -313,7 +303,7 @@ main {
 
 .welcomeTextContainer {
   height: 10rem;
-  max-width: 30rem;
+  max-width: 35rem;
   padding: 5px;
   text-align: center;
   letter-spacing: 2px;
@@ -336,7 +326,7 @@ main {
 
 @media screen and (min-width: 1024px) {
   .mainBody {
-    height: calc(100vh - 7rem);
+    height: calc(100vh - 6rem);
   }
 
   .welcomeDiv {
@@ -367,7 +357,7 @@ main {
 
 @media screen and (min-width: 1024px) {
   .welcomeTextContainer h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 
   .welcomeTextContainer p {
@@ -582,3 +572,68 @@ main .Products:nth-child(2) .product-title {
 
 /* card styles */
 /* card styles */
+
+.contactMe {
+  height: inherit;
+  width: 100%;
+  background: url("../images/ian-taylor-GmE1tMTsYf0-unsplash.jpg") no-repeat;
+  background-size: 100% 100%;
+  background-color: rgba(240, 230, 140, 0.466);
+}
+
+.form {
+  height: 100%;
+  width: 70%;
+  max-width: 50rem;
+}
+
+.formInner {
+  height: 70%;
+  background-color: #ffffff80;
+  border-radius: 1rem;
+  width: 100%;
+  flex-wrap: wrap;
+  padding: 2rem;
+}
+
+.inputContainer {
+  position: relative;
+  width: 20rem;
+  height: 3rem;
+  margin: 0.5rem 1rem;
+  align-items: flex-end;
+}
+
+.message {
+  width: 90%;
+}
+
+.inputContainer input {
+  height: 2rem;
+  width: 100%;
+  padding: 0.5rem;
+  outline: none;
+  border-bottom: 2px solid #000;
+  background: transparent;
+}
+
+.inputContainer label {
+  position: absolute;
+  bottom: 0;
+  left: 0.5rem;
+  transition: all 0.2s ease-in-out;
+  cursor: text;
+  user-select: none;
+}
+
+.inputContainer input::placeholder {
+  color: transparent;
+}
+
+.inputContainer input:focus + label,
+/* .inputContainer input:active + label, */
+.inputContainer input:not(:placeholder-shown) + label {
+  /* z-index: 1; */
+  bottom: 1.5rem;
+  left: 0;
+}
