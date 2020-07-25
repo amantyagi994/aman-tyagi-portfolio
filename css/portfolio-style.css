@@ -237,8 +237,8 @@ main {
 }
 
 .mainBody {
-  height: calc(100vh - 8rem);
-  margin: 0 1rem 1rem;
+  height: calc(100vh - 8.5rem);
+  margin: 0 1rem;
   border-radius: 1rem;
   flex-direction: column-reverse;
 }
@@ -250,10 +250,10 @@ main {
   bottom: 0;
   left: 0;
   flex-direction: column;
-  background-color: #ae00ff;
+  background: linear-gradient(0deg, #4a2ff973, #cf93f171);
   border-radius: 0 0 1rem 1rem;
   z-index: 10;
-  padding: 0.5rem;
+  /* padding: 0.5rem; */
 }
 
 .socialConnect {
@@ -281,7 +281,7 @@ main {
 .contentContainer {
   position: relative;
   width: 100%;
-  height: calc(100vh - 8rem);
+  height: calc(100vh - 8.5rem);
   border-radius: 1rem 1rem 0 0;
   flex-direction: column;
   overflow-y: auto;
@@ -294,7 +294,7 @@ main {
 }
 
 .welcomeDiv {
-  height: inherit;
+  /* height: inherit; */
   position: relative;
   padding-top: 3rem;
   width: 100%;
@@ -574,11 +574,13 @@ main .Products:nth-child(2) .product-title {
 /* card styles */
 
 .contactMe {
-  height: inherit;
+  /* height: inherit; */
   width: 100%;
   background: url("../images/ian-taylor-GmE1tMTsYf0-unsplash.jpg") no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
+  background-position: center;
   background-color: rgba(240, 230, 140, 0.466);
+  padding: 2rem 0;
 }
 
 .form {
@@ -588,7 +590,7 @@ main .Products:nth-child(2) .product-title {
 }
 
 .formInner {
-  height: 70%;
+  /* height: 70%; */
   background-color: #ffffff80;
   border-radius: 1rem;
   width: 100%;
@@ -600,7 +602,7 @@ main .Products:nth-child(2) .product-title {
   position: relative;
   width: 20rem;
   height: 3rem;
-  margin: 0.5rem 1rem;
+  margin: 1rem;
   align-items: flex-end;
 }
 
@@ -631,9 +633,17 @@ main .Products:nth-child(2) .product-title {
 }
 
 .inputContainer input:focus + label,
-/* .inputContainer input:active + label, */
+.inputContainer input:active + label,
 .inputContainer input:not(:placeholder-shown) + label {
-  /* z-index: 1; */
   bottom: 1.5rem;
   left: 0;
+}
+
+.submit {
+  width: 100%;
+  background: linear-gradient(0deg, #4b2ff9, rgb(134, 34, 228));
+  border-radius: 0.5rem;
+  padding: 1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 8px -4px #00000077;
 }

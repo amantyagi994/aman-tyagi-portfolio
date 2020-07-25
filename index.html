@@ -10,10 +10,10 @@
   <body>
     <div class="canva">
       <!-- <canvas></canvas> -->
-      <svg width="100%" height="100%">
+      <svg width="100vw" height="100vh">
         <defs>
           <pattern
-            id="polka-dots"
+            id="dots"
             x="0"
             y="0"
             width="100"
@@ -24,13 +24,7 @@
           </pattern>
         </defs>
 
-        <rect
-          x="0"
-          y="0"
-          width="100%"
-          height="100%"
-          fill="url(#polka-dots)"
-        ></rect>
+        <rect x="0" y="0" width="100vw" height="100vh" fill="url(#dots)"></rect>
       </svg>
     </div>
 
@@ -391,25 +385,23 @@
                 <div class="inputContainer dp-flex">
                   <input
                     type="text"
-                    name="firstname"
+                    name="firstName"
                     id="firstName"
-                    class="first-name"
+                    class="firstName"
                     placeholder="First Name"
                   />
-                  <label for="firstname">First Name</label>
+                  <label for="firstName">First Name</label>
                 </div>
-
                 <div class="inputContainer dp-flex">
                   <input
                     type="text"
-                    name="lastname"
+                    name="lastName"
                     id="lastName"
-                    class="last-name"
+                    class="lastName"
                     placeholder="Last Name"
                   />
-                  <label for="lastname">Last Name</label>
+                  <label for="lastName">Last Name</label>
                 </div>
-
                 <div class="inputContainer dp-flex">
                   <input
                     type="text"
@@ -441,6 +433,12 @@
                     placeholder="Your Message Here"
                   />
                   <label for="message">Your Message here</label>
+                </div>
+
+                <div class="inputContainer dp-flex message">
+                  <button class="submit">
+                    Send Message
+                  </button>
                 </div>
               </div>
             </div>
