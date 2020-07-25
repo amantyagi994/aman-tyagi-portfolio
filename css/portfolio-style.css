@@ -37,25 +37,35 @@ ul {
 svg text {
   font-family: "Modak", cursive;
   letter-spacing: 10px;
-  stroke: #993cd2;
+  /* stroke: #b980dd; */
   fill: black;
   font-size: 3.5rem;
   stroke-width: 3;
 
-  animation: textAnimate 5s infinite alternate;
+  animation: textAnimate 5s ease alternate infinite;
 }
 
 @keyframes textAnimate {
   0% {
-    stroke-dasharray: 0 50%;
-    stroke-dashoffset: 10%;
-    fill: #8610e0;
+    stroke-dasharray: 0 100;
+    stroke-dashoffset: -10;
+    fill: #000;
+    stroke: #fff;
+  }
+
+  25% {
+    /* stroke-dasharray: 50% 50%;
+    stroke-dashoffset: 50%; */
+    fill: #000000;
+    stroke: #ffffff;
+    /* stroke: rgb(72, 255, 0); */
   }
 
   100% {
-    stroke-dasharray: 50% 0;
-    stroke-dashoffset: -40%;
-    fill: #299bafe0;
+    stroke-dasharray: 40 0;
+    stroke-dashoffset: -10;
+    fill: #ffffff;
+    stroke: #d114d1;
   }
 }
 
@@ -75,15 +85,19 @@ main {
 }
 
 .navTop {
+  position: fixed;
+  top: 0;
   justify-content: space-between;
-  /* background-color: #ffffff28; */
+  background-color: #000;
   height: 8rem;
+  width: 100%;
   border-radius: 0 0 1rem 1rem;
+  z-index: 20;
 }
 
 @media (min-width: 1024px) {
   svg text {
-    font-size: 5rem;
+    font-size: 4rem;
     transform: translate(-25%, -50%);
   }
   .navTop {
@@ -92,11 +106,11 @@ main {
 }
 
 .ham-wrapper {
-  width: 100%;
+  /* width: 100%; */
   height: 5rem;
-  position: fixed;
+  position: relative;
   top: 0;
-  left: 0;
+  /* left: 0; */
   z-index: 1;
   /* background-color: darkblue; */
 }
@@ -123,6 +137,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+  /* background-color: lightpink; */
 }
 
 .ham-wrapper .hamburger-menu > div {
@@ -175,8 +190,9 @@ main {
 }
 
 .ham-wrapper .menu {
-  position: fixed;
+  position: relative;
   top: 0;
+  right: 0;
   width: 100%;
   height: 4rem;
   visibility: hidden;
@@ -184,6 +200,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+  /* background-color: lightgrey; */
 }
 
 .ham-wrapper .menu .item-container {
@@ -198,7 +215,7 @@ main {
 .ham-wrapper .menu .item-container .items {
   list-style-type: none;
   color: #8610e0;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 600;
   text-align: end;
   display: flex;
@@ -206,13 +223,20 @@ main {
 
 .ham-wrapper .menu .item-container .items li {
   /* margin: 2rem 0; */
-  padding: 0 1rem;
+  /* padding: 0 0.5rem; */
 }
 
 .ham-wrapper .menu .item-container .items a {
   color: inherit;
   text-decoration: none;
-  transition: color 0.5s ease;
+  transition: all 0.5s ease;
+  padding: 0 0.5rem;
+  border-radius: 1rem;
+}
+
+.ham-wrapper .menu .item-container .items a:hover {
+  background-color: #ffffff44;
+  color: #fff;
 }
 
 @media (min-width: 1024px) {
@@ -225,7 +249,7 @@ main {
   }
 
   .ham-wrapper .menu {
-    right: 0;
+    /* right: 0; */
     height: 5rem;
     width: 20rem;
     visibility: visible;
@@ -237,8 +261,8 @@ main {
 }
 
 .mainBody {
-  height: calc(100vh - 8.5rem);
-  margin: 0 1rem;
+  /* height: calc(100vh - 8.5rem); */
+  margin: 6rem 1rem 2rem;
   border-radius: 1rem;
   flex-direction: column-reverse;
 }
@@ -281,7 +305,7 @@ main {
 .contentContainer {
   position: relative;
   width: 100%;
-  height: calc(100vh - 8.5rem);
+  /* height: calc(100vh - 8.5rem); */
   border-radius: 1rem 1rem 0 0;
   flex-direction: column;
   overflow-y: auto;
@@ -326,7 +350,7 @@ main {
 
 @media screen and (min-width: 1024px) {
   .mainBody {
-    height: calc(100vh - 6rem);
+    /* height: calc(100vh - 6rem); */
   }
 
   .welcomeDiv {
@@ -602,7 +626,7 @@ main .Products:nth-child(2) .product-title {
   position: relative;
   width: 20rem;
   height: 3rem;
-  margin: 1rem;
+  margin: 1rem 0.6rem;
   align-items: flex-end;
 }
 
@@ -646,4 +670,7 @@ main .Products:nth-child(2) .product-title {
   padding: 1rem;
   cursor: pointer;
   box-shadow: 0 4px 8px -4px #00000077;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: white;
 }
