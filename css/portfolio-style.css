@@ -35,13 +35,16 @@ ul {
   align-items: center;
 }
 
+main {
+  max-width: 150rem;
+}
+
 svg text {
   font-family: "Modak", cursive;
   letter-spacing: 10px;
   fill: black;
   font-size: 3.5rem;
   stroke-width: 3;
-
   animation: textAnimate 5s ease alternate infinite;
 }
 
@@ -53,14 +56,14 @@ svg text {
 
 @keyframes textAnimate {
   0% {
-    stroke-dasharray: 0 40;
+    stroke-dasharray: 0 50;
     stroke-dashoffset: -10;
     fill: #000000;
     stroke: #fff;
   }
 
   100% {
-    stroke-dasharray: 100 0;
+    stroke-dasharray: 50 0;
     stroke-dashoffset: -50;
     fill: #ffffff;
     stroke: #d114d1;
@@ -267,19 +270,14 @@ main {
 .mainBody {
   margin: 6rem 1rem 1rem;
   border-radius: 1rem;
-  flex-direction: column-reverse;
+  flex-direction: column;
 }
 
 .socialMediaContainer {
   width: 100%;
   height: 3rem;
-  position: relative;
-  bottom: 0;
-  left: 0;
-  flex-direction: column;
   background: linear-gradient(0deg, #4a2ff973, #cf93f171);
   border-radius: 0 0 1rem 1rem;
-  z-index: 10;
   padding: 0.5rem;
 }
 
@@ -350,8 +348,7 @@ main {
   box-shadow: 0 3px 30px #00000033;
 }
 
-/* @media screen and (min-width: 1024px) {
-  
+@media screen and (min-width: 1024px) {
   .welcomeDiv {
     flex-direction: row;
     justify-content: space-evenly;
@@ -368,7 +365,7 @@ main {
     right: 1.5rem;
     box-shadow: -3px 0 30px #00000033;
   }
-} */
+}
 
 .welcomeTextContainer h2 {
   font-size: 1.5rem;
@@ -378,15 +375,17 @@ main {
   font-size: 1.3rem;
 }
 
-/* @media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px) {
   .welcomeTextContainer h2 {
     font-size: 2.5rem;
+    text-align: end;
   }
 
   .welcomeTextContainer p {
     font-size: 1.5rem;
+    text-align: end;
   }
-} */
+}
 
 .showcase {
   margin-top: 3rem;
@@ -571,83 +570,6 @@ main .Products:nth-child(2) .product-title {
 
 /* card styles */
 /* card styles */
-
-.contactMe {
-  width: 100%;
-  background: url("../images/ian-taylor-GmE1tMTsYf0-unsplash.jpg") no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-color: rgba(240, 230, 140, 0.466);
-  padding: 2rem 0;
-}
-
-.form {
-  height: 100%;
-  width: 95%;
-  max-width: 50rem;
-}
-
-.formInner {
-  background-color: #ffffff80;
-  border-radius: 1rem;
-  width: 100%;
-  flex-wrap: wrap;
-  padding: 1rem;
-}
-
-.inputContainer {
-  position: relative;
-  width: 90%;
-  max-width: 20rem;
-  height: 3rem;
-  margin: 1rem 0;
-  align-items: flex-end;
-}
-
-/* .inputContainer:nth-child(odd) {
-  margin-right: 1.5rem;
-  background-color: cornsilk;
-}
-
-.inputContainer:nth-child(even) {
-  margin-left: 1.5rem;
-  background-color: cornflowerblue;
-} */
-
-.inputContainer.message {
-  min-width: 90%;
-  /* margin: 1rem 0; */
-  /* margin-right: 0; */
-}
-
-.inputContainer input {
-  height: 2rem;
-  width: 100%;
-  padding: 0.5rem;
-  outline: none;
-  border-bottom: 2px solid #000;
-  background: transparent;
-}
-
-.inputContainer label {
-  position: absolute;
-  bottom: 0;
-  left: 0.5rem;
-  transition: all 0.2s ease-in-out;
-  cursor: text;
-  user-select: none;
-}
-
-.inputContainer input::placeholder {
-  color: transparent;
-}
-
-.inputContainer input:focus + label,
-.inputContainer input:active + label,
-.inputContainer input:not(:placeholder-shown) + label {
-  bottom: 1.5rem;
-  left: 0;
-}
 
 .submit {
   width: 100%;
