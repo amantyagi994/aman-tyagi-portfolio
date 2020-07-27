@@ -44,7 +44,7 @@ svg text {
   letter-spacing: 10px;
   fill: black;
   font-size: 3.5rem;
-  stroke-width: 3;
+  stroke-width: 2;
   animation: textAnimate 5s ease alternate infinite;
 }
 
@@ -238,6 +238,7 @@ main {
   transition: all 0.5s ease;
   padding: 0 0.5rem;
   border-radius: 1rem;
+  margin: 0 0.5rem;
 }
 
 .ham-wrapper .menu .item-container .items a:hover {
